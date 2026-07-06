@@ -1,0 +1,206 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job Openings</title>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+        background:#f4f6f9;
+        padding:40px;
+    }
+
+    h1{
+        text-align:center;
+        color:#1f3c88;
+        margin-bottom:35px;
+    }
+
+    .container{
+        max-width:1200px;
+        margin:auto;
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(380px,1fr));
+        gap:30px;
+    }
+
+    .card{
+        background:#fff;
+        border-radius:12px;
+        overflow:hidden;
+        box-shadow:0 8px 20px rgba(0,0,0,.1);
+        transition:.3s;
+    }
+
+    .card:hover{
+        transform:translateY(-5px);
+    }
+
+    .header{
+        padding:20px;
+        color:#fff;
+        text-align:center;
+    }
+
+    .airline{
+        background:#0d6efd;
+    }
+
+    .fintech{
+        background:#198754;
+    }
+
+    .content{
+        padding:25px;
+    }
+
+    h3{
+        color:#333;
+        margin:18px 0 10px;
+    }
+
+    ul{
+        padding-left:20px;
+    }
+
+    li{
+        margin-bottom:10px;
+        line-height:1.6;
+    }
+
+    .salary{
+        margin-top:20px;
+        background:#f8f9fa;
+        border-left:5px solid #ffc107;
+        padding:15px;
+        font-size:18px;
+        font-weight:bold;
+        color:#d63384;
+    }
+
+    .apply-btn{
+        display:block;
+        width:100%;
+        text-align:center;
+        background:#1f3c88;
+        color:#fff;
+        text-decoration:none;
+        padding:14px;
+        margin-top:20px;
+        border-radius:8px;
+        transition:.3s;
+    }
+
+    .apply-btn:hover{
+        background:#16306d;
+    }
+</style>
+
+</head>
+<body>
+
+<h1>📢 We're Hiring!</h1>
+
+<div class="container">
+
+    <!-- Airline Project -->
+    <div class="card">
+        <div class="header airline">
+            <h2>✈️ Airline Project</h2>
+        </div>
+
+        <div class="content">
+
+            <h3>Requirements</h3>
+            <ul>
+                <li>Minimum SPM & above (SPM, Diploma, A-Level, STPM, Degree, Master & PhD).</li>
+                <li>Minimum 1 year experience in any Customer Service field.</li>
+                <li>Able to speak, read & write Bahasa Malaysia and English.</li>
+            </ul>
+
+            <h3>Job Description</h3>
+            <ul>
+                <li>Handle inbound customer calls.</li>
+                <li>Training will be provided (subject to operational requirements).</li>
+            </ul>
+
+            <h3>Working Hours</h3>
+            <ul>
+                <li>24/7 operation.</li>
+                <li>Rotational shift based on operational requirements.</li>
+                <li>May be required to work on Public Holidays.</li>
+                <li>2 rotational OFF days per week (Monday - Sunday).</li>
+                <li>9 working hours including 1-hour meal break and 15–30 minutes short break.</li>
+            </ul>
+
+            <h3>Location</h3>
+            <ul>
+                <li>📍 UOA Business Park, Shah Alam</li>
+            </ul>
+
+            <div class="salary">
+                💰 Salary Package: Up to <strong>RM3,100</strong> (Inclusive of KPI)
+            </div>
+
+            <a href="#" class="apply-btn">Apply Now</a>
+
+        </div>
+    </div>
+
+    <!-- Fintech Project -->
+    <div class="card">
+        <div class="header fintech">
+            <h2>💳 Fintech Project</h2>
+        </div>
+
+        <div class="content">
+
+            <h3>Requirements</h3>
+            <ul>
+                <li>Minimum SPM & above (SPM, Diploma, A-Level, STPM, Degree, Master & PhD).</li>
+                <li>Minimum 1 year experience in any Customer Service field.</li>
+                <li>Able to speak, read & write Bahasa Malaysia and English.</li>
+            </ul>
+
+            <h3>Job Description</h3>
+            <ul>
+                <li>Handle customer calls, chats & emails.</li>
+                <li>Training will be provided (subject to operational requirements).</li>
+            </ul>
+
+            <h3>Working Hours</h3>
+            <ul>
+                <li>Operation Hours: 7:00 AM – 10:00 PM.</li>
+                <li>Rotational shift based on operational requirements.</li>
+                <li>May be required to work on Public Holidays.</li>
+                <li>2 rotational OFF days per week (Monday - Sunday).</li>
+                <li>9 working hours including 1-hour meal break and 15–30 minutes short break.</li>
+            </ul>
+
+            <h3>Location</h3>
+            <ul>
+                <li>📍 UOA Business Park, Shah Alam</li>
+            </ul>
+
+            <div class="salary">
+                💰 Salary Package: Up to <strong>RM2,600</strong> (Inclusive of KPI)
+            </div>
+
+            <a href="#" class="apply-btn">Apply Now</a>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
