@@ -1,550 +1,461 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ShiftLine Careers — Contact Centre Openings, Shah Alam</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ShiftLine Careers</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@400;500;swap
+
 <style>
-  :root{
-    --bg:#0B0F1C;
-    --bg2:#0E1424;
-    --glass:rgba(255,255,255,0.045);
-    --glass-border:rgba(255,255,255,0.09);
-    --text:#EDEFF7;
-    --text-dim:#8D95AC;
-    --airline:#4F8CFF;
-    --airline-glow:rgba(79,140,255,0.35);
-    --fintech:#17D9A3;
-    --fintech-glow:rgba(23,217,163,0.32);
-    --amber:#FFB13C;
-    --mono:'IBM Plex Mono', monospace;
-    --display:'Sora', sans-serif;
-    --body:'Inter', sans-serif;
-  }
-  *{box-sizing:border-box; margin:0; padding:0;}
-  html{scroll-behavior:smooth;}
-  body{
-    background:var(--bg);
-    color:var(--text);
-    font-family:var(--body);
-    line-height:1.55;
-    -webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
-  }
-  a{color:inherit;}
-  img,svg{display:block;}
-  ::selection{background:var(--airline); color:#fff;}
+:root{
+--bg:#0B0F1C;
+--card:#11182b;
+--text:#edf0f7;
+--muted:#8d95ac;
+--border:rgba(255,255,255,.08);
+--blue:#4F8CFF;
+--green:#17D9A3;
+--amber:#FFB13C;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+background:var(--bg);
+color:var(--text);
+font-family:Inter,sans-serif;
+line-height:1.6
+}
+a{text-decoration:none;color:inherit}
+section{padding:80px 6vw}
 
-  #progress{
-    position:fixed; top:0; left:0; height:2px; width:0%;
-    background:linear-gradient(90deg, var(--airline), var(--fintech));
-    z-index:200; transition:width .08s linear;
-  }
+.topbar{
+position:sticky;
+top:0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 6vw;
+background:rgba(11,15,28,.85);
+backdrop-filter:blur(10px);
+border-bottom:1px solid var(--border);
+z-index:99;
+}
 
-  .aurora{position:absolute; inset:0; overflow:hidden; z-index:0; pointer-events:none;}
-  .aurora span{position:absolute; border-radius:50%; filter:blur(90px); opacity:0.35; animation:drift 22s ease-in-out infinite alternate;}
-  .aurora span.a1{width:480px; height:480px; background:var(--airline); top:-160px; left:-100px;}
-  .aurora span.a2{width:420px; height:420px; background:var(--fintech); top:-80px; right:-140px; animation-delay:-8s;}
-  .aurora span.a3{width:360px; height:360px; background:var(--amber); bottom:-200px; left:35%; opacity:0.18; animation-delay:-14s;}
-  @keyframes drift{0%{transform:translate(0,0) scale(1);} 100%{transform:translate(40px,50px) scale(1.15);}}
-  @media (prefers-reduced-motion: reduce){ .aurora span{animation:none;} }
+.brand{
+font-family:Sora,sans-serif;
+font-weight:700;
+}
 
-  .topbar{
-    display:flex; align-items:center; justify-content:space-between; padding:18px 6vw;
-    position:sticky; top:0; z-index:100; background:rgba(11,15,28,0.65);
-    backdrop-filter:blur(14px); border-bottom:1px solid var(--glass-border);
-  }
-  .brand{display:flex; align-items:center; gap:10px; font-family:var(--display); font-weight:700; font-size:1.1rem; letter-spacing:-0.01em;}
-  .brand .dot{width:8px; height:8px; border-radius:50%; background:var(--amber); box-shadow:0 0 12px var(--amber);}
-  .topbar nav{display:flex; gap:26px; font-size:0.9rem; font-weight:500;}
-  .topbar nav a{text-decoration:none; opacity:0.7; transition:opacity .15s;}
-  .topbar nav a:hover{opacity:1;}
-  .clockbox{
-    font-family:var(--mono); font-size:0.76rem; color:var(--text-dim);
-    display:flex; align-items:center; gap:8px; padding:6px 12px;
-    border:1px solid var(--glass-border); border-radius:20px; background:var(--glass);
-  }
-  #clockTime{color:var(--text); font-weight:500;}
+.hero{
+display:grid;
+grid-template-columns:1.3fr 1fr;
+gap:50px;
+align-items:center;
+padding:100px 6vw;
+}
 
-  .hero{
-    position:relative; padding:11vh 6vw 8vh;
-    display:grid; grid-template-columns:1.25fr 1fr; gap:5vw; align-items:end;
-    border-bottom:1px solid var(--glass-border);
-  }
-  .hero > *{position:relative; z-index:1;}
-  .eyebrow{
-    font-family:var(--mono); font-size:0.76rem; letter-spacing:0.08em; text-transform:uppercase;
-    color:var(--text-dim); margin-bottom:18px; display:flex; align-items:center; gap:10px;
-  }
-  .eyebrow::before{content:''; width:24px; height:1px; background:var(--text-dim);}
-  h1{font-family:var(--display); font-weight:700; letter-spacing:-0.02em; font-size:clamp(2.2rem, 4.6vw, 3.8rem); line-height:1.05;}
-  h1 .grad{background:linear-gradient(90deg, var(--airline), var(--fintech)); -webkit-background-clip:text; background-clip:text; color:transparent;}
-  .hero p.lede{margin-top:22px; font-size:1.08rem; max-width:48ch; color:var(--text-dim);}
-  .fact-pills{display:flex; gap:10px; flex-wrap:wrap; margin-top:26px;}
-  .fact-pill{
-    font-family:var(--mono); font-size:0.76rem; padding:8px 14px; border-radius:20px;
-    border:1px solid var(--glass-border); background:var(--glass); color:var(--text-dim);
-    display:flex; align-items:center; gap:7px;
-  }
-  .fact-pill svg{flex-shrink:0;}
-  .hero-actions{display:flex; gap:14px; margin-top:30px; flex-wrap:wrap;}
-  .btn{
-    font-family:var(--body); font-weight:600; font-size:0.92rem; padding:14px 24px; border-radius:8px;
-    text-decoration:none; display:inline-flex; align-items:center; gap:8px; cursor:pointer; border:1px solid transparent;
-    transition:transform .15s ease, box-shadow .2s ease, background .2s ease;
-  }
-  .btn:active{transform:translateY(1px) scale(0.99);}
-  .btn-primary{background:linear-gradient(90deg, var(--airline), var(--fintech)); color:#06101F;}
-  .btn-primary:hover{box-shadow:0 0 0 3px rgba(255,255,255,0.08), 0 8px 28px -6px var(--airline-glow);}
-  .btn-ghost{border-color:var(--glass-border); color:var(--text); background:var(--glass);}
-  .btn-ghost:hover{background:rgba(255,255,255,0.09);}
+.hero h1{
+font-family:Sora,sans-serif;
+font-size:clamp(2rem,5vw,4rem);
+line-height:1.05;
+}
 
-  .hero-panel{border:1px solid var(--glass-border); background:var(--glass); backdrop-filter:blur(10px); padding:26px; border-radius:14px;}
-  .hero-panel .k{font-family:var(--mono); font-size:0.72rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--text-dim);}
-  .hero-panel .v{font-family:var(--display); font-size:1.7rem; font-weight:700; margin-top:4px;}
-  .hero-panel-grid{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:18px; padding-top:18px; border-top:1px solid var(--glass-border);}
-  .hero-panel-grid div div:last-child{font-weight:600; margin-top:2px;}
+.grad{
+background:linear-gradient(90deg,var(--blue),var(--green));
+-webkit-background-clip:text;
+color:transparent;
+}
 
-  .reveal{opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease;}
-  .reveal.in-view{opacity:1; transform:translateY(0);}
+.lede{margin:20px 0;color:var(--muted)}
 
-  .matcher{
-    margin:0 6vw; padding:32px; border-radius:16px; margin-top:6vh;
-    border:1px solid var(--glass-border); background:var(--glass); backdrop-filter:blur(10px);
-    display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap;
-  }
-  .matcher h3{font-family:var(--display); font-size:1.2rem; font-weight:600;}
-  .matcher p{color:var(--text-dim); font-size:0.9rem; margin-top:4px;}
-  .matcher-opts{display:flex; gap:10px; flex-wrap:wrap;}
-  .m-btn{
-    font-family:var(--body); font-size:0.86rem; font-weight:600; padding:11px 18px; border-radius:8px;
-    border:1px solid var(--glass-border); background:rgba(255,255,255,0.03); color:var(--text);
-    cursor:pointer; transition:all .18s ease;
-  }
-  .m-btn:hover{border-color:var(--airline); background:rgba(79,140,255,0.12);}
-  .matcher-result{font-family:var(--mono); font-size:0.82rem; color:var(--text-dim); margin-top:14px; min-height:18px;}
-  .matcher-result span{color:var(--text); font-weight:600;}
+.btn{
+display:inline-block;
+padding:14px 22px;
+border-radius:8px;
+font-weight:600;
+margin-right:10px;
+}
 
-  .section-head{padding:9vh 6vw 3vh; display:flex; justify-content:space-between; align-items:flex-end; gap:20px; flex-wrap:wrap;}
-  .section-head h2{font-family:var(--display); font-weight:700; font-size:clamp(1.6rem,2.6vw,2.2rem); letter-spacing:-0.01em;}
-  .section-head p{color:var(--text-dim); max-width:52ch; font-size:0.95rem;}
+.primary{
+background:linear-gradient(90deg,var(--blue),var(--green));
+color:#000;
+}
 
-  .jobs{display:grid; grid-template-columns:1fr 1fr; gap:28px; padding:0 6vw 8vh;}
-  .job{
-    --glow:var(--airline-glow);
-    padding:36px; border-radius:18px; position:relative;
-    background:linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.015));
-    border:1px solid var(--glass-border);
-    transform-style:preserve-3d; will-change:transform;
-    transition:transform .12s ease, box-shadow .3s ease, border-color .3s ease;
-  }
-  .job:hover{box-shadow:0 20px 60px -20px var(--glow); border-color:rgba(255,255,255,0.18);}
-  .job.matched{border-color:var(--amber); box-shadow:0 0 0 2px var(--amber), 0 20px 60px -20px var(--glow);}
-  .job.fintech{--glow:var(--fintech-glow);}
+.ghost{
+border:1px solid var(--border);
+}
 
-  .job-top{display:flex; justify-content:space-between; align-items:flex-start; gap:12px; flex-wrap:wrap;}
-  .job-tag{display:inline-flex; align-items:center; gap:8px; font-family:var(--mono); font-size:0.74rem; text-transform:uppercase; letter-spacing:0.06em; padding:6px 12px; border-radius:20px;}
-  .job.airline .job-tag{background:rgba(79,140,255,0.15); color:var(--airline);}
-  .job.fintech .job-tag{background:rgba(23,217,163,0.15); color:var(--fintech);}
+.panel{
+background:var(--card);
+padding:25px;
+border:1px solid var(--border);
+border-radius:14px;
+}
 
-  .live-badge{font-family:var(--mono); font-size:0.7rem; display:flex; align-items:center; gap:6px; padding:5px 10px; border-radius:20px; border:1px solid var(--glass-border); color:var(--text-dim);}
-  .live-dot{width:6px; height:6px; border-radius:50%; background:#556;}
-  .live-badge.on .live-dot{background:var(--fintech); box-shadow:0 0 8px var(--fintech); animation:blink 1.6s infinite;}
-  .live-badge.on{color:var(--text);}
-  @keyframes blink{0%,100%{opacity:1;} 50%{opacity:0.4;}}
+.matcher{
+margin:40px 6vw;
+padding:30px;
+background:var(--card);
+border:1px solid var(--border);
+border-radius:14px;
+}
 
-  .headcount-pill{
-    margin-top:16px; display:inline-flex; align-items:center; gap:7px; font-family:var(--mono); font-size:0.74rem;
-    color:var(--amber); border:1px solid rgba(255,177,60,0.35); background:rgba(255,177,60,0.08); padding:6px 12px; border-radius:20px;
-  }
+.m-buttons{
+margin-top:15px;
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+}
 
-  .job h3{font-family:var(--display); font-size:1.7rem; font-weight:700; letter-spacing:-0.01em; margin-top:18px;}
-  .job .role-sub{color:var(--text-dim); margin-top:6px; font-size:0.94rem;}
-  .job-body{display:grid; grid-template-columns:1fr auto; gap:28px; margin-top:30px; align-items:start;}
+.m-buttons button{
+padding:10px 15px;
+background:none;
+color:white;
+border:1px solid var(--border);
+border-radius:8px;
+cursor:pointer;
+}
 
-  .dial-wrap{display:flex; flex-direction:column; align-items:center; gap:10px;}
-  .dial{width:164px; height:164px; border-radius:50%; display:flex; align-items:center; justify-content:center; position:relative;}
-  .dial .core{width:114px; height:114px; border-radius:50%; background:var(--bg2); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; border:1px solid var(--glass-border);}
-  .dial .core .t1{font-family:var(--mono); font-size:0.8rem; font-weight:500;}
-  .dial .core .t2{font-family:var(--mono); font-size:0.6rem; color:var(--text-dim); margin-top:3px;}
-  .dial-caption{font-family:var(--mono); font-size:0.68rem; color:var(--text-dim); text-align:center; max-width:170px;}
+.jobs{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(360px,1fr));
+gap:25px;
+padding:0 6vw 80px;
+}
 
-  .facts{display:flex; flex-direction:column; gap:14px;}
-  .fact{display:flex; gap:12px; align-items:flex-start; font-size:0.92rem; color:#D7DCEA;}
-  .fact svg{flex-shrink:0; margin-top:3px;}
-  .fact b{font-weight:600; color:var(--text);}
+.job{
+background:var(--card);
+border:1px solid var(--border);
+border-radius:18px;
+padding:30px;
+}
 
-  .divider-label{font-family:var(--mono); font-size:0.72rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--text-dim); margin:28px 0 14px; display:flex; align-items:center; gap:10px;}
-  .divider-label::after{content:''; flex:1; height:1px; background:var(--glass-border);}
+.airline{--accent:var(--blue)}
+.fintech{--accent:var(--green)}
 
-  .req-list{list-style:none; display:flex; flex-direction:column; gap:10px;}
-  .req-list li{display:flex; gap:10px; font-size:0.92rem; align-items:flex-start; color:#D7DCEA;}
-  .req-list svg{flex-shrink:0; margin-top:3px;}
+.tag{
+display:inline-block;
+padding:6px 12px;
+border-radius:20px;
+font-size:.75rem;
+background:rgba(255,255,255,.05);
+color:var(--accent);
+}
 
-  .qual-pills{display:flex; flex-wrap:wrap; gap:8px; margin-top:6px;}
-  .pill{font-family:var(--mono); font-size:0.72rem; padding:5px 10px; border:1px solid var(--glass-border); border-radius:20px; background:rgba(255,255,255,0.03); color:var(--text-dim);}
+.job h3{
+font-family:Sora,sans-serif;
+margin:15px 0;
+}
 
-  .salary-block{margin-top:28px; padding:20px; border:1px dashed var(--glass-border); border-radius:12px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;}
-  .salary-block .amt{font-family:var(--display); font-size:2rem; font-weight:700;}
-  .salary-block .amt span{font-size:0.95rem; font-weight:500; color:var(--text-dim);}
-  .job.airline .amt{color:var(--airline);}
-  .job.fintech .amt{color:var(--fintech);}
-  .salary-note{font-size:0.78rem; color:var(--text-dim); max-width:22ch;}
+.role-sub{
+color:var(--muted);
+}
 
-  .job .apply{margin-top:26px; width:100%; justify-content:center; color:#06101F;}
-  .job.airline .apply{background:linear-gradient(90deg, var(--airline), #8FB6FF);}
-  .job.fintech .apply{background:linear-gradient(90deg, var(--fintech), #7CF0CC);}
-  .job .apply:hover{box-shadow:0 10px 30px -10px var(--glow);}
+.list{
+margin-top:20px;
+list-style:none;
+}
 
-  .location{padding:8vh 6vw; border-top:1px solid var(--glass-border); display:grid; grid-template-columns:1fr 1fr; gap:5vw; align-items:center;}
-  .location h2{font-family:var(--display); font-size:1.8rem; font-weight:700; letter-spacing:-0.01em;}
-  .location p{color:var(--text-dim); margin-top:14px; max-width:48ch;}
-  .loc-card{border:1px solid var(--glass-border); background:var(--glass); backdrop-filter:blur(10px); border-radius:14px; padding:24px; font-family:var(--mono); font-size:0.85rem;}
-  .loc-card .row{display:flex; justify-content:space-between; padding:11px 0; border-bottom:1px solid var(--glass-border);}
-  .loc-card .row:last-child{border-bottom:none;}
-  .loc-card .row span:first-child{color:var(--text-dim);}
+.list li{
+margin-bottom:12px;
+}
 
-  footer{padding:5vh 6vw; border-top:1px solid var(--glass-border); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; font-size:0.85rem; color:var(--text-dim);}
+.list li::before{
+content:"✓";
+color:var(--green);
+margin-right:8px;
+font-weight:bold;
+}
 
-  .modal-overlay{position:fixed; inset:0; background:rgba(5,7,14,0.7); display:none; align-items:center; justify-content:center; z-index:200; padding:20px; backdrop-filter:blur(4px);}
-  .modal-overlay.open{display:flex;}
-  .modal{background:var(--bg2); border-radius:16px; max-width:460px; width:100%; padding:32px; position:relative; border:1px solid var(--glass-border); box-shadow:0 30px 80px -20px rgba(0,0,0,0.6);}
-  .modal h3{font-family:var(--display); font-size:1.4rem; margin-bottom:6px;}
-  .modal p.sub{color:var(--text-dim); font-size:0.88rem; margin-bottom:22px;}
-  .modal .close{position:absolute; top:18px; right:18px; cursor:pointer; background:none; border:none;}
-  .field{margin-bottom:14px;}
-  .field label{font-size:0.78rem; font-weight:600; display:block; margin-bottom:6px; color:var(--text-dim);}
-  .field input, .field select{width:100%; padding:11px 12px; border:1px solid var(--glass-border); border-radius:8px; font-family:var(--body); font-size:0.92rem; background:rgba(255,255,255,0.04); color:var(--text);}
-  .field input::placeholder{color:#5A6178;}
-  .field input:focus, .field select:focus{outline:2px solid var(--airline); outline-offset:1px;}
-  .field select option{background:var(--bg2);}
+.salary{
+margin-top:25px;
+padding:15px;
+border:1px dashed var(--border);
+border-radius:10px;
+}
 
-  @media (max-width:900px){
-    .hero{grid-template-columns:1fr;}
-    .jobs{grid-template-columns:1fr;}
-    .job-body{grid-template-columns:1fr;}
-    .dial-wrap{align-self:center;}
-    .location{grid-template-columns:1fr;}
-    .topbar nav{display:none;}
-    .matcher{flex-direction:column; align-items:flex-start;}
-  }
+.salary strong{
+font-size:2rem;
+color:var(--accent);
+display:block;
+}
+
+.apply{
+margin-top:20px;
+width:100%;
+background:var(--accent);
+color:#000;
+}
+
+.location{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+.loc-card{
+background:var(--card);
+padding:25px;
+border-radius:14px;
+border:1px solid var(--border);
+}
+
+.loc-card div{
+padding:10px 0;
+border-bottom:1px solid var(--border);
+}
+
+footer{
+padding:30px 6vw;
+border-top:1px solid var(--border);
+color:var(--muted);
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+}
+
+.modal{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.75);
+align-items:center;
+justify-content:center;
+}
+
+.modal.show{
+display:flex;
+}
+
+.modal-box{
+background:var(--card);
+padding:30px;
+width:420px;
+border-radius:14px;
+}
+
+input,select{
+width:100%;
+padding:12px;
+margin:8px 0 15px;
+background:#1a2339;
+border:1px solid var(--border);
+color:white;
+border-radius:8px;
+}
+
+@media(max-width:900px){
+.hero,.location{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
 
-<div id="progress"></div>
-
-<div class="topbar">
-  <div class="brand"><span class="dot"></span>ShiftLine Careers</div>
-  <nav>
-    <a href="#airline">Airline Project</a>
-    <a href="#fintech">Fintech Project</a>
-    <a href="#location">Location</a>
-  </nav>
-  <div class="clockbox">🇲🇾 <span id="clockTime">--:--:--</span> MYT</div>
-</div>
+<header class="topbar">
+<div class="brand">ShiftLine Careers</div>
+<div id="clock"></div>
+</header>
 
 <section class="hero">
-  <div class="aurora"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
-  <div>
-    <div class="eyebrow">Contact centre recruitment · Shah Alam</div>
-    <h1>Two open projects,<br><span class="grad">hiring multiple agents</span> now.</h1>
-    <p class="lede">Airline and Fintech accounts are both actively recruiting at UOA Business Park. These aren't single-seat roles — we're building full teams for each. Pick the shift that fits your life.</p>
-    <div class="fact-pills">
-      <span class="fact-pill"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="#17D9A3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>2 projects hiring in batches</span>
-      <span class="fact-pill"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="#17D9A3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Full training provided</span>
-      <span class="fact-pill"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="#17D9A3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>SPM and above accepted</span>
-    </div>
-    <div class="hero-actions">
-      <a href="#airline" class="btn btn-primary">View Airline Project</a>
-      <a href="#fintech" class="btn btn-ghost">View Fintech Project</a>
-    </div>
-  </div>
-  <div class="hero-panel">
-    <div class="k">Common to both roles</div>
-    <div class="v">SPM & above</div>
-    <div class="hero-panel-grid">
-      <div><div class="k">Experience</div><div>1 yr customer service</div></div>
-      <div><div class="k">Languages</div><div>Bahasa Malaysia + English</div></div>
-      <div><div class="k">Days off</div><div>2 / week, rotational</div></div>
-      <div><div class="k">Login hours</div><div>9 hrs incl. breaks</div></div>
-    </div>
-  </div>
+<div>
+<h1>Hiring for <span class="grad">Airline & Fintech</span> Projects</h1>
+
+<p class="lede">
+Multiple customer service positions available in Shah Alam.
+SPM and above accepted. Training provided.
+</p>
+
+<a href="#jobs" gs</a>
+<a hrefonLocation</a>
+</div>
+
+<div class="panel">
+<h3>Basic Requirements</h3>
+<ul class="list">
+<li>SPM and above</li>
+<li>1 year customer service experience</li>
+<li>English & Bahasa Malaysia</li>
+<li>2 rotational off days</li>
+</ul>
+</div>
 </section>
 
-<div class="matcher reveal">
-  <div>
-    <h3>Not sure which shift fits you?</h3>
-    <p>Tell us your availability — we'll point you to the right project.</p>
-    <div class="matcher-result" id="matchResult"></div>
-  </div>
-  <div class="matcher-opts">
-    <button class="m-btn" onclick="matchShift('anytime')">I'm free anytime, incl. nights</button>
-    <button class="m-btn" onclick="matchShift('day')">I'm free daytime only (7am–10pm)</button>
-    <button class="m-btn" onclick="matchShift('either')">Either works for me</button>
-  </div>
+<div class="matcher">
+<h3>Find your best match</h3>
+
+<div class="m-buttons">
+<button onclick="match('airline')">Available 24/7</button>
+<button onclick="match('fintech')">Day Shift Only</button>
+<button onclick="match('both')">Either</button>
 </div>
 
-<div class="section-head reveal">
-  <h2>The two openings</h2>
-  <p>Same building, same base requirements, different rhythm — and both are hiring several agents, not just one. Compare the shift windows below before you apply.</p>
+<p id="result"></p>
 </div>
 
-<div class="jobs">
+<section id="jobs">
+<h2 style="padding:0 6vw 30px">Current Openings</h2>
+<div class="jobs" id="jobsContainer"></div>
+</section>
 
-  <article class="job airline reveal" id="airline">
-    <div class="job-top">
-      <span class="job-tag">✈ Airline Project</span>
-      <span class="live-badge" id="airlineLive"><span class="live-dot"></span><span>—</span></span>
-    </div>
-    <div class="headcount-pill">👥 Multiple positions open — hiring in batches</div>
-    <h3>Airline Customer Service</h3>
-    <p class="role-sub">Inbound voice support · training provided</p>
-
-    <div class="job-body">
-      <div class="facts">
-        <div class="fact">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8h2l1.5-2 2 4 2-6 1.5 4H14" stroke="#4F8CFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <div>Handle inbound <b>calls only</b>; scope may adjust with operational needs.</div>
-        </div>
-        <div class="fact">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="#4F8CFF" stroke-width="1.6"/><path d="M8 5v3l2 1.5" stroke="#4F8CFF" stroke-width="1.6" stroke-linecap="round"/></svg>
-          <div><b>24/7 operation</b>, rotational shifts based on business needs.</div>
-        </div>
-        <div class="fact">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="10" rx="1.5" stroke="#4F8CFF" stroke-width="1.6"/><path d="M2 6h12" stroke="#4F8CFF" stroke-width="1.6"/></svg>
-          <div>Public holidays may require work, per operational schedule.</div>
-        </div>
-      </div>
-
-      <div class="dial-wrap">
-        <div class="dial" style="background:conic-gradient(#4F8CFF 0deg 120deg, #33507F 120deg 240deg, #5D7BB8 240deg 360deg);">
-          <div class="core">
-            <div class="t1">24 / 7</div>
-            <div class="t2">3-GROUP ROTATION</div>
-          </div>
-        </div>
-        <div class="dial-caption">Full-day coverage split across rotating shift groups</div>
-      </div>
-    </div>
-
-    <div class="divider-label">Requirements</div>
-    <div class="qual-pills">
-      <span class="pill">SPM</span><span class="pill">Diploma</span><span class="pill">A-Level</span>
-      <span class="pill">STPM</span><span class="pill">Degree</span><span class="pill">Master</span><span class="pill">PhD</span>
-    </div>
-    <ul class="req-list" style="margin-top:14px;">
-      <li><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="#17D9A3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Minimum 1 year experience in any customer service field</li>
-      <li><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="#17D9A3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Able to speak, read & write in Bahasa Malaysia and English</li>
-      <li><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="#17D9A3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Comfortable with rotational shifts, including weekends & public holidays</li>
-    </ul>
-
-    <div class="salary-block">
-      <div class="amt">RM 3,100 <span>/ month</span></div>
-      <div class="salary-note">Total package including KPI incentives</div>
-    </div>
-
-    <button class="btn apply" onclick="openModal('Airline Project')">Apply for Airline Project →</button>
-  </article>
-
-  <article class="job fintech reveal" id="fintech">
-    <div class="job-top">
-      <span class="job-tag">💳 Fintech Project</span>
-      <span class="live-badge" id="fintechLive"><span class="live-dot"></span><span>—</span></span>
-    </div>
-    <div class="headcount-pill">👥 Multiple positions open — hiring in batches</div>
-    <h3>Fintech Customer Service</h3>
-    <p class="role-sub">Calls, chats & emails · training provided</p>
-
-    <div class="job-body">
-      <div class="facts">
-        <div class="fact">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4h12v8H5l-3 2V4z" stroke="#17D9A3" stroke-width="1.6" stroke-linejoin="round"/></svg>
-          <div>Handle <b>calls, chats and emails</b>; scope may adjust with operational needs.</div>
-        </div>
-        <div class="fact">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="#17D9A3" stroke-width="1.6"/><path d="M8 5v3l2 1.5" stroke="#17D9A3" stroke-width="1.6" stroke-linecap="round"/></svg>
-          <div><b>7:00 AM – 10:00 PM</b> operation, rotational shifts.</div>
-        </div>
-        <div class="fact">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="10" rx="1.5" stroke="#17D9A3" stroke-width="1.6"/><path d="M2 6h12" stroke="#17D9A3" stroke-width="1.6"/></svg>
-          <div>Public holidays may require work, per operational schedule.</div>
-        </div>
-      </div>
-
-      <div class="dial-wrap">
-        <div class="dial" style="background:conic-gradient(#2A3348 0deg 105deg, #17D9A3 105deg 330deg, #2A3348 330deg 360deg);">
-          <div class="core">
-            <div class="t1">07:00–22:00</div>
-            <div class="t2">ROTATIONAL WINDOW</div>
-          </div>
-        </div>
-        <div class="dial-caption">Coverage window only — no overnight shifts</div>
-      </div>
-    </div>
-
-    <div class="divider-label">Requirements</div>
-    <div class="qual-pills">
-      <span class="pill">SPM</span><span class="pill">Diploma</span><span class="pill">A-Level</span>
-      <span class="pill">STPM</span><span class="pill">Degree</span><span class="pill">Master</span><span class="pill">PhD</span>
-    </div>
-    <ul class="req-list" style="margin-top:14px;">
-      <li><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="#17D9A3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Minimum 1 year experience in any customer service field</li>
-      <li><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="#17D9A3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Able to speak, read & write in Bahasa Malaysia and English</li>
-      <li><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="#17D9A3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Comfortable with rotational shifts, including weekends & public holidays</li>
-    </ul>
-
-    <div class="salary-block">
-      <div class="amt">RM 2,600 <span>/ month</span></div>
-      <div class="salary-note">Total package including KPI incentives</div>
-    </div>
-
-    <button class="btn apply" onclick="openModal('Fintech Project')">Apply for Fintech Project →</button>
-  </article>
-
+<section class="location" id="location">
+<div>
+<h2>Work Location</h2>
+<p>Both projects are based at UOA Business Park, Shah Alam.</p>
 </div>
 
-<section class="location reveal" id="location">
-  <div>
-    <h2>One address, two teams</h2>
-    <p>Both accounts run out of the same site — no need to guess where you're headed for the interview or first day of training.</p>
-  </div>
-  <div class="loc-card">
-    <div class="row"><span>Site</span><span>UOA Business Park</span></div>
-    <div class="row"><span>City</span><span>Shah Alam, Selangor</span></div>
-    <div class="row"><span>Days off</span><span>2 / week (Mon–Sun rotation)</span></div>
-    <div class="row"><span>Login hours</span><span>9 hrs (incl. 1 hr meal + short break)</span></div>
-    <div class="row"><span>Training</span><span>Provided for both accounts</span></div>
-  </div>
+<div class="loc-card">
+<div>📍 UOA Business Park</div>
+<div>📍 Shah Alam, Selangor</div>
+<div>📅 2 Rotational Off Days</div>
+<div>⏰ 9 Working Hours</div>
+<div>🎓 Training Provided</div>
+</div>
 </section>
 
 <footer>
-  <div>ShiftLine Careers — recruiting for Airline & Fintech contact centre accounts.</div>
-  <div>UOA Business Park, Shah Alam, Selangor</div>
+<div>ShiftLine Careers</div>
+<div>Shah Alam, Selangor</div>
 </footer>
 
-<div class="modal-overlay" id="modalOverlay">
-  <div class="modal">
-    <button class="close" onclick="closeModal()" aria-label="Close">
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 4l10 10M14 4L4 14" stroke="#EDEFF7" stroke-width="1.6" stroke-linecap="round"/></svg>
-    </button>
-    <h3 id="modalTitle">Apply</h3>
-    <p class="sub">We'll open your email client with the details pre-filled — send it and we'll reach out.</p>
-    <div class="field">
-      <label for="fname">Full name</label>
-      <input type="text" id="fname" placeholder="As per NRIC / IC">
-    </div>
-    <div class="field">
-      <label for="fphone">Phone number</label>
-      <input type="text" id="fphone" placeholder="e.g. 012-3456789">
-    </div>
-    <div class="field">
-      <label for="fqual">Highest qualification</label>
-      <select id="fqual">
-        <option>SPM</option><option>Diploma</option><option>A-Level</option>
-        <option>STPM</option><option>Degree</option><option>Master</option><option>PhD</option>
-      </select>
-    </div>
-    <button class="btn btn-primary" style="width:100%; justify-content:center; margin-top:6px;" onclick="sendApplication()">Continue via email →</button>
-  </div>
+<div class="modal" id="modal">
+<div class="modal-box">
+<h3 id="roleTitle">Apply</h3>
+
+<input id="name" placeholder="Full Name">
+<input id="phone" placeholder="Phone Number">
+
+<select id="qual">
+<option>SPM</option>
+<option>Diploma</option>
+<option>STPM</option>
+<option>Degree</option>
+<option>Master</option>
+<option>PhD</option>
+</select>
+
+<button class="btn primary" onclick="applyNow()">
+Continue via Email
+</button>
+</div>
 </div>
 
 <script>
-  window.addEventListener('scroll', function(){
-    const h = document.documentElement;
-    const pct = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
-    document.getElementById('progress').style.width = pct + '%';
-  });
+const jobs=[
+{
+id:'airline',
+tag:'✈ Airline Project',
+title:'Airline Customer Service',
+sub:'Inbound calls only',
+salary:'RM 3,100',
+info:[
+'24/7 rotational shift',
+'Work weekends & public holidays',
+'Training provided'
+]
+},
+{
+id:'fintech',
+tag:'💳 Fintech Project',
+title:'Fintech Customer Service',
+sub:'Calls, chat & email',
+salary:'RM 2,600',
+info:[
+'7AM - 10PM shifts',
+'Work weekends & public holidays',
+'Training provided'
+]
+}
+];
 
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const revealEls = document.querySelectorAll('.reveal');
-  if(reduceMotion){
-    revealEls.forEach(el => el.classList.add('in-view'));
-  } else {
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in-view'); io.unobserve(e.target); } });
-    }, {threshold:0.15});
-    revealEls.forEach(el => io.observe(el));
-  }
+const container=document.getElementById('jobsContainer');
 
-  if(!reduceMotion){
-    document.querySelectorAll('.job').forEach(card=>{
-      card.addEventListener('mousemove', (e)=>{
-        const r = card.getBoundingClientRect();
-        const x = (e.clientX - r.left) / r.width - 0.5;
-        const y = (e.clientY - r.top) / r.height - 0.5;
-        card.style.transform = `perspective(900px) rotateY(${x*4}deg) rotateX(${-y*4}deg) translateY(-2px)`;
-      });
-      card.addEventListener('mouseleave', ()=>{ card.style.transform = ''; });
-    });
-  }
+container.innerHTML=jobs.map(j=>`
+<div class="job ${j.id}" id="${j.id}">
+<span class="tag">${j.tag}</span>
 
-  function tickClock(){
-    const now = new Date();
-    const opts = {timeZone:'Asia/Kuala_Lumpur', hour:'2-digit', minute:'2-digit', second:'2-digit', hour12:false};
-    document.getElementById('clockTime').textContent = now.toLocaleTimeString('en-GB', opts);
-    const hourStr = now.toLocaleString('en-GB', {timeZone:'Asia/Kuala_Lumpur', hour:'2-digit', hour12:false});
-    const hour = parseInt(hourStr, 10);
+<h3>${j.title}</h3>
+<p class="role-sub">${j.sub}</p>
 
-    const airlineBadge = document.getElementById('airlineLive');
-    airlineBadge.classList.add('on');
-    airlineBadge.querySelector('span:last-child').textContent = 'LIVE NOW · 24/7';
+<ul class="list">
+${j.info.map(i=>`<li>${i}</li>`).join('')}
+</ul>
 
-    const fintechBadge = document.getElementById('fintechLive');
-    const fintechOn = hour >= 7 && hour < 22;
-    fintechBadge.classList.toggle('on', fintechOn);
-    fintechBadge.querySelector('span:last-child').textContent = fintechOn ? 'LIVE NOW' : 'OFF-WINDOW (opens 7AM)';
-  }
-  tickClock();
-  setInterval(tickClock, 1000);
+<div class="salary">
+<strong>${j.salary}</strong>
+Package including KPI incentive
+</div>
 
-  function matchShift(kind){
-    const result = document.getElementById('matchResult');
-    document.querySelectorAll('.job').forEach(j => j.classList.remove('matched'));
-    let targetId, msg;
-    if(kind === 'anytime'){
-      targetId = 'airline';
-      msg = 'Best fit: <span>Airline Project</span> — 24/7 rotation covers nights too.';
-    } else if(kind === 'day'){
-      targetId = 'fintech';
-      msg = 'Best fit: <span>Fintech Project</span> — daytime window, 7am–10pm only.';
-    } else {
-      targetId = 'airline';
-      msg = 'Both could work — start with <span>either project</span> below, both are hiring now.';
-    }
-    result.innerHTML = msg;
-    const target = document.getElementById(targetId);
-    target.classList.add('matched');
-    if(kind === 'either'){ document.getElementById('fintech').classList.add('matched'); }
-    setTimeout(()=> target.scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth', block:'center'}), 250);
-  }
+<button class="btn apply"
+onclick="openModal('${j.title}')">
+Apply Now
+</button>
+</div>
+`).join('');
 
-  let currentRole = '';
-  function openModal(role){
-    currentRole = role;
-    document.getElementById('modalTitle').textContent = 'Apply · ' + role;
-    document.getElementById('modalOverlay').classList.add('open');
-  }
-  function closeModal(){ document.getElementById('modalOverlay').classList.remove('open'); }
-  document.getElementById('modalOverlay').addEventListener('click', function(e){ if(e.target === this) closeModal(); });
-  function sendApplication(){
-    const name = document.getElementById('fname').value || '(name not provided)';
-    const phone = document.getElementById('fphone').value || '(phone not provided)';
-    const qual = document.getElementById('fqual').value;
-    const subject = encodeURIComponent('Application: ' + currentRole);
-    const body = encodeURIComponent(
-      'Role applying for: ' + currentRole + '\n' +
-      'Name: ' + name + '\n' +
-      'Phone: ' + phone + '\n' +
-      'Highest qualification: ' + qual + '\n'
-    );
-    window.location.href = 'mailto:careers@yourcompany.com?subject=' + subject + '&body=' + body;
-  }
+function match(type){
+const r=document.getElementById('result');
+
+if(type==='airline')
+r.innerHTML='Best match: Airline Project';
+
+else if(type==='fintech')
+r.innerHTML='Best match: Fintech Project';
+
+else
+r.innerHTML='Both projects are suitable';
+}
+
+let role='';
+
+function openModal(r){
+role=r;
+document.getElementById('roleTitle').textContent=r;
+document.getElementById('modal').classList.add('show');
+}
+
+document.getElementById('modal')
+.onclick=e=>{
+if(e.target.id==='modal')
+e.target.classList.remove('show');
+};
+
+function applyNow(){
+const name=document.getElementById('name').value;
+const phone=document.getElementById('phone').value;
+const qual=document.getElementById('qual').value;
+
+location.href=
+`mailto:careers@yourcompany.com?subject=${role}&body=
+Name:${name}
+Phone:${phone}
+Qualification:${qual}`;
+}
+
+function clock(){
+document.getElementById('clock').innerHTML=
+new Date().toLocaleTimeString(
+'en-GB',
+{
+timeZone:'Asia/Kuala_Lumpur'
+}
+);
+}
+
+clock();
+setInterval(clock,1000);
+</script>
+
+<elevenlabs-convai
+agent-id="agent_5101kwgs6jprej6vreaztfg9eh7g">
+</elevenlabs-convai>
+
+<script
+src="https://unpkg.com/@elevenlabs/convai-widget-embed"
+async>
 </script>
 <elevenlabs-convai agent-id="agent_5101kwgs6jprej6vreaztfg9eh7g"></elevenlabs-convai><script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 </body>
 </html>
 
+  
